@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../01_RAII_Memory_Management/smart_ptr_test.h
+boost/scoped_ptr.hpp
+-
+iostream
+-
+
+/Users/ice/workspace/ClionProjects/boost-xp/main.cpp
+iostream
+-
+smart_ptr_test.h
+-
+
