@@ -1,8 +1,11 @@
 #include <iostream>
+#include <future_test.h>
 #include "smart_ptr_test.h"
 #include "ScopeExit _test.h"
 #include "PointerContainer_test.h"
 #include "pool_test.h"
+#include "thread_test.h"
+#include "tuple_test.h"
 
 int main() {
 
@@ -43,12 +46,36 @@ int main() {
 
 #endif
 
-#if 1
+#if 0
     test_simple_segregated_storage();
 
     test_object_pool();
 #endif
 
+#if 0
+
+    test_tuple1();
+    test_tuple2();
+    test_tuple3();
+    test_tuple4();
+    test_tuple5();
+    test_tuple6();
+    test_tuple7();
+    test_tuple8();
+    test_tuple9();
+    test_tuple10();
+#endif
+
+#if 1
+    test_promise();
+    test_future2();
+//    std::list<int> ls = {1, 3, 4, 2};
+//    std::list<int> ls2 = parallel_quick_sort<int>(ls);
+
+    test_mul_promise();
+    std::cout << "" << std::endl;
+
+#endif
 
 
     return 0;

@@ -11,10 +11,11 @@ include_directories(/usr/local/include
                     01_RAII_Memory_Management
                     02_String_Handing
                     03_Containers
-                    04_thread
+                    04_Data_Structures
+                    10_thread
                     .)
 
 aux_source_directory(. SRC)
-add_executable(boost_xp ${SRC})
+add_executable(boost_xp ${SRC} 04_Data_Structures/tuple_test.h 10_thread/future_test.h)
 target_link_libraries(boost_xp ${Boost_LIBRARIES})
 
