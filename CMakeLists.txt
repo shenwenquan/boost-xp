@@ -16,6 +16,6 @@ include_directories(/usr/local/include
                     .)
 
 aux_source_directory(. SRC)
-add_executable(boost_xp ${SRC} 04_Data_Structures/tuple_test.h 10_thread/future_test.h)
+add_executable(boost_xp ${SRC})
 target_link_libraries(boost_xp ${Boost_LIBRARIES})
 
