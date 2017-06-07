@@ -16,6 +16,6 @@ include_directories(/usr/local/include
                     .)
 
 aux_source_directory(. SRC)
-add_executable(boost_xp ${SRC})
+add_executable(boost_xp ${SRC} 10_thread/work_queue_test.h)
 target_link_libraries(boost_xp ${Boost_LIBRARIES})
 

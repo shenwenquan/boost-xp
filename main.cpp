@@ -8,6 +8,7 @@
 #include "thread_test.h"
 #include "tuple_test.h"
 #include "thread_pool_test.h"
+#include "work_queue_test.h"
 
 int main() {
 
@@ -68,7 +69,7 @@ int main() {
     test_tuple10();
 #endif
 
-#if 1
+#if 0
     test_promise();
     test_future2();
 //    std::list<int> ls = {1, 3, 4, 2};
@@ -84,6 +85,8 @@ int main() {
 
 #endif
 
-
+#if 1
+    test_work_queue();
+#endif
     return 0;
 }
