@@ -9,6 +9,7 @@
 #include "tuple_test.h"
 #include "thread_pool_test.h"
 #include "work_queue_test.h"
+#include "io_service_test.h"
 
 int main() {
 
@@ -85,8 +86,11 @@ int main() {
 
 #endif
 
-#if 1
+#if 0
     test_work_queue();
+#endif
+#if 1
+    detail::test_io_service();
 #endif
     return 0;
 }

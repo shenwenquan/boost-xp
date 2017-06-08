@@ -57,7 +57,7 @@ void do_nothing(){
     std::cout<<"......." << std::endl;
 }
 
-const std::size_t tests_tasks_count = 3;
+const std::size_t tests_tasks_count = 3000000;
 
 void pusher(){
 
@@ -69,6 +69,7 @@ void pusher(){
 void popper_sync(){
     for(std::size_t i = 0;i< tests_tasks_count;i++){
         work_queue::task_type type=  g_queue.pop_task();
+        type();
     }
 }
 
