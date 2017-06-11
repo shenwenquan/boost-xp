@@ -10,6 +10,7 @@
 #include "thread_pool_test.h"
 #include "work_queue_test.h"
 #include "io_service_test.h"
+#include "thread_pool_new_test.h"
 
 int main() {
 
@@ -89,8 +90,23 @@ int main() {
 #if 0
     test_work_queue();
 #endif
-#if 1
+#if 0
     detail::test_io_service();
+#endif
+#if 1
+
+    // create thread pool with 4 worker threads
+    ThreadPool pool(10);
+
+// enqueue and store future
+    while(true){
+        auto result = pool.enqueue([](int answer) { return answer; }, 42);
+
+// get result from future
+        std::cout << result.get() << std::endl;
+    }
+
+
 #endif
     return 0;
 }
